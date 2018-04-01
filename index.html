@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+PS2 - CandyCrush UI
+-->
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Candy Crush</title>
+
+<!-- Use mobile-aware viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Load style sheets -->
+<link rel="stylesheet" href="game.css">
+
+<!-- Load any supplemental Javascript libraries here -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/seedrandom.js"></script>
+
+<!-- Constructible EventTarget polyfill — Only Chrome 64+ supports constructible EventTarget objects natively -->
+<script src="https://unpkg.com/event-target@latest/min.js"></script>
+
+<script src="util.js"></script>
+<script src="candy.js"></script>
+<script src="board.js"></script>
+<script src="rules.js"></script>
+<script src="game.js"></script>
+
+</head>
+
+<body>
+
+<header class="col-l">
+
+	<div id = "left" class = "section col-3">
+		<div class = "row col-s-4" align="center">
+			<h1>Candy Crush!</h1>
+		</div>
+		<div class = "row col-s-4" align="center">
+			<button id="scoreboard" class="button" disabled="True" style="background-color: lightgrey"><h2 id="points">0</h2>points</button>
+		</div>
+		<div class = "row col-s-4" align="center">
+	<!--		onclick="newgame_fn()"-->
+			<button id="newgame_btn" class="button" style="background-color: dodgerblue">New Game!</button>
+		</div>
+		<div class = "row col-s-4" align="center">
+			<button id="hint_btn" class="button" style="background-color: rebeccapurple">Show Hint</button>
+		</div>
+	</div>
+</header>
+
+<main class="col-c">
+	<div class="col-6">
+		<div class="board">
+			<div id = "container" class="board-container">
+			</div>
+		</div>
+	</div>
+</main>
+
+<div class="col-r">
+	<div id = "right" class = "sectionright col-13">
+		<div class = "row" >
+			<div class = "cellControl"> 
+				<button disabled="True" class="buttonBlock"></button>
+			</div>
+			<div class = "cellControl"> 
+				<button id="uparrow" disabled="True" class="buttonControl">↑</button>
+			</div>
+			<div class = "cellControl">
+				<button disabled="True" class="buttonBlock"></button>
+			</div>
+		</div>
+		<div class = "row" >
+			<div class = "cellControl"> 
+				<button id="leftarrow" disabled="True" class="buttonControl">←</button>
+			</div>
+			<div class = "cellControl"> 
+				<input id="display_txb" type="text"></input>
+			</div>
+			<div class = "cellControl"> 
+				<button id="rightarrow" disabled="True" class="buttonControl">→</button>
+			</div>
+		</div>
+		<div class = "row" >
+			<div class = "cellControl"> 
+				<button disabled="True" class="buttonBlock"></button>
+			</div>
+			<div class = "cellControl"> 
+				<button id="downarrow" disabled="True" class="buttonControl">↓</button>
+			</div>
+			<div class = "cellControl">
+				<button disabled="True" class="buttonBlock"></button>
+			</div>
+		</div>
+		<div class = "row" align="center">
+			<p><button id="crushonce" disabled class="buttonControl">Crush Once</button></p>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>
